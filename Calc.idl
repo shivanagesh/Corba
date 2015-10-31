@@ -1,0 +1,10 @@
+module CalcApp{
+
+    interface Calc{
+       exception DivisionByZero {};
+       exception CalcError {};
+       double calculate (in string opcode, in double op1, in double op2) raises (DivisionByZero,CalcError);
+       oneway void shutdown();
+    };
+
+};
